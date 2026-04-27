@@ -13,7 +13,8 @@
         android:id="@+id/btn_read_contacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="读取所有联系人" />
+        android:text="读取所有联系人"
+        android:layout_marginTop="30dp"/>
 
     <!-- 查询指定电话的联系人 -->
     <EditText
