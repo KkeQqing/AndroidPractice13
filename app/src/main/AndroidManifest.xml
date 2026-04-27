@@ -24,10 +24,6 @@
             </intent-filter>
         </activity>
 
-        <provider
-            android:name=".MyContentProvider"
-            android:authorities="com.example.androidpractice13.provider"
-            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,18 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
 
+    <!-- 读取所有联系人 -->
     <Button
-        android:id="@+id/btn_query_specific"
+        android:id="@+id/btn_read_contacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="查询特定号码联系人"
-        android:layout_marginTop="30dp"/>
+        android:text="读取所有联系人" />
 
-    <ListView
-        android:id="@+id/list_view_contacts"
+    <!-- 查询指定电话的联系人 -->
+    <EditText
+        android:id="@+id/et_phone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:hint="请输入要查询的电话号码"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btn_query_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询该电话的联系人" />
+
+    <!-- 添加新联系人 -->
+    <EditText
+        android:id="@+id/et_add_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入联系人姓名" />
+
+    <EditText
+        android:id="@+id/et_add_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入联系人电话"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btn_add_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加新联系人" />
+
+    <!-- 结果展示 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </ScrollView>
+
 </LinearLayout>
